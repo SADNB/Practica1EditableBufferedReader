@@ -4,14 +4,15 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.InputStreamReader;
+import java.util.List
 
 public class Line{
-	char vector[];
+	ArrayList<Integer> vector;
 	int poscursor;
 	boolean escriptura;
 	public Line(){
 		this.poscursor=0;
-		this.vector[]=null;
+		this.vector=new ArrayList<Integer>();
 		this.escriptura=true;
 	}
 
