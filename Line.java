@@ -25,36 +25,28 @@ public class Line{
 	}
 
 	public void backspace(){
-		int i;
-		for(i=poscursor;i<vector.length()-1;i++){
-			vector[i]=vector[i+1];
-		}
-		vector[vector.length()-1]="";
+		int espacio=" ";		
+		vector.add(poscursor,espacio);
+		this.poscursor=vector.size();
 	}
 
 	public void end(){
-		this.poscursor=vector.length()-1;
+		this.poscursor=vector.size()-1;
 	}
 
 	public void delete(){
-		int i;
-		for(i=poscursor+1;i<vector.length()-1;i++){
-			vector[i]=vector[i+1];
-		}
-		vector[vector.length()-1]=null;
+		vector.remove(poscursor);
+		this.poscursor=vector.size();
 	}
 	
-	public void addChar(char caracter){
+	public void addChar(int caracter){
 		int i;
 		if(escriptura==true){
-			vector[poscursor+1]=caracter;
-			poscursor=poscursor+1;
+			vector.add(caracter);
 		}else{
-		for(i=vector.length();i>poscursor;i++){
-			vector[i+1]=vector[i];
+			vector.add(poscursor,caracter);	
 		}
-		vector[poscursor]=caracter;
-		}
+		this.poscursor=vector.size();
 	}
 	public void insert(){
 		if(escriptura==true){
