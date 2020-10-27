@@ -1,4 +1,4 @@
-package practica1;
+//package practica1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,9 +34,10 @@ public class EditableBufferedReader extends BufferedReader {
     static final int SEC_INSERT = 2005;
     static final int SEC_DELETE = 2006;
     
+	Line line;
     public EditableBufferedReader(InputStreamReader in) {
         super(in);
-        //this.line = New Line();
+        this.line = new Line();
     }
 
     

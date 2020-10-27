@@ -1,10 +1,10 @@
-package practica1;
+//package practica1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.InputStreamReader;
-import java.util.List
+import java.util.ArrayList;
 
 public class Line{
 	ArrayList<Integer> vector;
@@ -25,8 +25,7 @@ public class Line{
 	}
 
 	public void backspace(){
-		int espacio=" ";		
-		vector.add(poscursor,espacio);
+		vector.remove(poscursor-1);
 		this.poscursor=vector.size();
 	}
 

@@ -7,7 +7,7 @@ public class Comptador {
                 try {
 			String comando;
 			comando = "tput cols";
-			// Ejcutamos el comando
+			// Ejecutamos el comando
                         Process p = Runtime.getRuntime().exec(comando);
 
                         BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
