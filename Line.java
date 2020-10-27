@@ -28,7 +28,11 @@ public class Line{
 		vector.remove(poscursor-1);
 		this.poscursor=vector.size();
 	}
-
+	
+	public void home(){
+		this.poscursor=0;	
+	}
+	
 	public void end(){
 		this.poscursor=vector.size()-1;
 	}
