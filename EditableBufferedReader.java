@@ -1,5 +1,7 @@
 //package practica1;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -20,7 +22,7 @@ public class EditableBufferedReader extends BufferedReader {
     static final int DELETE = 51;   // '3' ja que en el terminal ^[[3~
     static final int BACKSPACE = 127;   //tecla per borrar 
     static final int ESC = 27;      // ^[   es d'on partim
-    static final int ENTER = 10; 
+    static final int ENTER = 13; 
     static final int TILDE = 126; //pertany al símbol ~
     static final int CORCHETE = 91;
     
@@ -66,7 +68,6 @@ public class EditableBufferedReader extends BufferedReader {
     //llegeix el següent caràcter o la següent tecla de cursor
     int caracter = 0;
     
-    try { 
     caracter = super.read();
     //Aquesta funció la realitzem indagant amb el TestReadLine amb BufferedReader
     //Retorna el número del caracter llegit o en cas d'arribar al final retorna -1
@@ -74,7 +75,6 @@ public class EditableBufferedReader extends BufferedReader {
         caracter = super.read();    //torna a llegir
         if(caracter == CORCHETE) {  //detectar que el següent es un corchete
             caracter = super.read();    //torna a llegir
-        }
         switch(caracter) {  //mirem el cas que ens trobem despres del corchete
                 case RIGHT:
                     return SEC_RIGHT;
@@ -99,14 +99,13 @@ public class EditableBufferedReader extends BufferedReader {
                 default:
                     return -1;
         }
+    }
     }else if (caracter == BACKSPACE) {  
                 return BACKSPACE;
-    
+   }else {
+	return caracter;
    }
-   }catch(IOException e) {
-       System.out.println("Error");
-   }
-        return caracter;
+        return -1;
 }
    
 public String readLine() throws IOException {
@@ -129,20 +128,23 @@ public String readLine() throws IOException {
             case SEC_DELETE:
                 this.line.delete();
                 break;
+	    case SEC_HOME:
+		this.line.home();
+		break;
             case SEC_END:
                 this.line.end();
                 break;
             case BACKSPACE:
                 this.line.backspace();
+		break;
             default:    //si no es un caracter especial, el guardem
                 this.line.addChar((char) caracter);
-                break;
         }
     }
     this.unsetRaw();    //desfer l'accio d'abans
     st = this.line.toString();	//podriem declarar una funció dins de Line per el toString
 
-return st;
-}
+	return st;
+	}
 
 }
