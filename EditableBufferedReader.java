@@ -45,7 +45,7 @@ public class EditableBufferedReader extends BufferedReader {
     
     public void unsetRaw() throws IOException {
     //passa la consola de mode raw a mode cooked
-        String [] cmd = {"/bin/sh", "-c", "stty raw </dev/tty"};
+        String [] cmd = {"/bin/sh", "-c", "stty cooked </dev/tty"};
         try {
         Runtime.getRuntime().exec(cmd).waitFor();
         }catch (IOException | InterruptedException e) {
