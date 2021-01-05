@@ -5,9 +5,9 @@ Pràctica 1: EditableBufferedReader
 En aquesta pràctica es treballarà amb el patró MVC (Model-View-Controller).
 El model gestiona tots els accesos a la informació, ja sigui per consultar-la o actualitzar-la.
 EL view seria l'interficie de l'usuari, per tant mostra a l'usuari la informació.
-El controller Respon a accions de l'usuari i invoca al model si hi ha peticions sobre la informació (editar una linia, per exemple). 
+El controller respon a accions de l'usuari i invoca al model si hi ha peticions sobre la informació (editar una linia, per exemple). 
 
-Interacció entre els components:
+# Interacció entre els components:
 L'usuari interactua amb el view (en el nostre cas, executant el TestReadLine). Llavors, el controller (EditableBufferedReader) serà l'encarregat de modificar el model (Line) amb l'acció sol·licitada per l'usuari (afegir caràcter, esborrar, desplaçar-se,...). El view obtindrà les dades del model per reflexar els canvis produits. També utilitzem el patró Observer que permetrà al model notificar a la resta els canvis produïts en la classe.
 
 
