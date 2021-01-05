@@ -30,4 +30,7 @@ L'usuari interactua amb el view (en el nostre cas, executant el TestReadLine). L
 --> TestRead: Classe semblant a TestReadLine però utilitzada a l'hora d'executar el mètode read. El vam crear ja que era més         fàcil i no haviem d'estar modificant constantment la classe anterior. 
 
 # EXECUCIÓ DE LA PRÀCTICA
-
+1. Executar TestReadLine.java. Així, estarem inicialitzant el projecte.
+2. Escriure en el terminal el que vulguem, i modificar-ho les vegades que necessitem.
+3. Un cop finalitzada l'introducció de les dades per part de l'usuari, apretar la tecla enter.
+4. Sortirà un missatge amb "line is:". A partir d'aquí, es mostrarà el resultat final del text introduït per teclat al terminal, amb les modificacions i subtitucions de caràcters pertinents.
