@@ -19,9 +19,9 @@ En aquesta pràctica es treballarà amb el patró MVC (Model-View-Controller).
 
 --> Console: Necessari per implementar el patró MVC. Representarà el component View. Respondrà a la sol·licitud d'editar la linia     o un desplaçament. Serà l'intermediari entre la classe Line i la classe TestReadLine. 
 
---> TestReadLine: Classe proporcioanada per executar amb la classe EditableBufferedReader el mètode readLine. Mostrarà els caràcters introduïts en la linia del terminal editats per pantalla.
+--> TestReadLine: Classe proporcioanada per executar amb la classe EditableBufferedReader el mètode readLine. Mostrarà els           caràcters introduïts en la linia del terminal editats per pantalla.
 
---> TestRead: Classe semblant a TestReadLine però utilitzada a l'hora d'executar el mètode read. El vam crear ja que era més fàcil i no haviem d'estar modificant constantment la classe anterior. 
+--> TestRead: Classe semblant a TestReadLine però utilitzada a l'hora d'executar el mètode read. El vam crear ja que era més         fàcil i no haviem d'estar modificant constantment la classe anterior. 
 
 # EXECUCIÓ DE LA PRÀCTICA
 
