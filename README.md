@@ -15,9 +15,9 @@ En aquesta pràctica es treballarà amb el patró MVC (Model-View-Controller).
     · read: llegueix el següent caràcter o la següent tecla de cursor. La seva funció és retornar el numero del caràcter                introduit pel terminal. Haurem de tenir en compte que s'hauran de llegir caràcters simples o símbols. Per tant, indagarem        per implementar l'algoritme executant al test proporcionat amb la classe BufferedReader. 
     · readLine: llegeix la linia amb possibilitat d'editar-la. A diferència de l'anterior mètode, fins que no s'apreti la tecla          enter no llegirà el caràcter, i el guardarà sempre que no sigui un simbol.
 
---> Line: Aquesta classe permet l'edició de la línia. Haurem de crear funcions per poder mourens per la linia i poder modificar el caràcter desitjat, esborrar-lo o substituir-lo per un altre, depenent del mode en el que ens trobem, ja sigui inserció o sobre-escriptura. Aquesta classe va lligada amb el mètode readLine de la classe EditableBufferedReader, ja que es el mètode que permet editar la linia inserida per terminal.
+--> Line: Aquesta classe permet l'edició de la línia. Haurem de crear funcions per poder mourens per la linia i poder modificar el caràcter desitjat, esborrar-lo o substituir-lo per un altre, depenent del mode en el que ens trobem, ja sigui inserció o sobre-escriptura. Aquesta classe va lligada amb el mètode readLine de la classe EditableBufferedReader, ja que es el mètode que permet editar la linia inserida per terminal. També servirà per implementar el patró MVC, que representarà al Model.
 
---> Console: 
+--> Console: Necessari per implementar el patró MVC. Representarà el component View. Respondrà a la sol·licitud d'editar la linia o un desplaçament. Serà l'intermediari entre la classe Line i la classe TestReadLine. 
 
 --> TestRead:
 
